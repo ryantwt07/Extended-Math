@@ -73,7 +73,7 @@ This function accepts two integer/float values. This function uses simple built-
 *Example of Function Implementation*
 
 ```python
-answer = ExtendedMath.subtract(8, 2)
+answer = ExtendedMath.divide(8, 2)
 print(answer)
 > 4
 ```
@@ -151,11 +151,11 @@ This function accepts 3 integer/float values. This function uses simple built-in
 *Example of Function Implementation*
 
 ```python
-ExtendedMath.discrimant(a: float, b: float, c: float)
+ExtendedMath.find_solution(a: float, b: float, c: float)
 ```
 
 ```python
-answer = ExtendedMath.discriminant(2, 2, 1)
+answer = ExtendedMath.find_solution(2, 2, 1)
 print(answer)
 > -4
 ```
