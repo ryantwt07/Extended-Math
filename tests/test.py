@@ -111,10 +111,10 @@ class TestExtendedMath:
     def test_log10(self):
         calculated_solution = ExtenededMath.log10(1073741824)
         if calculated_solution == self.solution:
-            print(f"Check 9 (Log10) ------------ {Colours.GREEN}PASSED{Colours.RESET}")
+            print(f"Check 10 (Log10) ------------ {Colours.GREEN}PASSED{Colours.RESET}")
             self.test_passed += 1
         else:
-            print(f"Check 9 (Log10) ------------ {Colours.RED}FAILED{Colours.RESET}")
+            print(f"Check 10 (Log10) ------------ {Colours.RED}FAILED{Colours.RESET}")
             print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
             self.test_failed += 1
     
