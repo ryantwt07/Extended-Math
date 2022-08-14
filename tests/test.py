@@ -25,7 +25,7 @@ class TestExtendedMath:
             self.test_passed += 1
         else:
             print(f"Check 1 (Addition) ------------ {Colours.RED}FAILED{Colours.RESET}")
-            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {self.solution}.")
             self.test_failed += 1
 
     def test_subtract(self):
@@ -35,7 +35,7 @@ class TestExtendedMath:
             self.test_passed += 1
         else:
             print(f"Check 2 (Subtraction) ------------ {Colours.RED}FAILED{Colours.RESET}")
-            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {self.solution}.")
             self.test_failed += 1
 
     def test_multiply(self):
@@ -45,7 +45,7 @@ class TestExtendedMath:
             self.test_passed += 1
         else:
             print(f"Check 3 (Multiplication) ------------ {Colours.RED}FAILED{Colours.RESET}")
-            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {self.solution}.")
             self.test_failed += 1
 
     def test_divide(self):
@@ -55,7 +55,7 @@ class TestExtendedMath:
             self.test_passed += 1
         else:
             print(f"Check 4 (Division) ------------ {Colours.RED}FAILED{Colours.RESET}")
-            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {self.solution}.")
             self.test_failed += 1
     
     def test_square_root(self):
@@ -65,7 +65,7 @@ class TestExtendedMath:
             self.test_passed += 1
         else:
             print(f"Check 5 (Square Root) ------------ {Colours.RED}FAILED{Colours.RESET}")
-            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {self.solution}.")
             self.test_failed += 1
     
     def test_cube_root(self):
@@ -75,7 +75,7 @@ class TestExtendedMath:
             self.test_passed += 1
         else:
             print(f"Check 6 (Cube Root) ------------ {Colours.RED}FAILED{Colours.RESET}")
-            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {self.solution}.")
             self.test_failed += 1
     
     def test_discriminant(self):
@@ -85,7 +85,7 @@ class TestExtendedMath:
             self.test_passed += 1
         else:
             print(f"Check 7 (Discriminant) ------------ {Colours.RED}FAILED{Colours.RESET}")
-            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {self.solution}.")
             self.test_failed += 1
     
     def test_solution(self):
@@ -95,7 +95,7 @@ class TestExtendedMath:
             self.test_passed += 1
         else:
             print(f"Check 8 (Solution) ------------ {Colours.RED}FAILED{Colours.RESET}")
-            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {self.solution}.")
             self.test_failed += 1
     
     def test_log(self):
@@ -105,7 +105,7 @@ class TestExtendedMath:
             self.test_passed += 1
         else:
             print(f"Check 9 (Log) ------------ {Colours.RED}FAILED{Colours.RESET}")
-            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {self.solution}.")
             self.test_failed += 1
         
     def test_log10(self):
@@ -115,7 +115,27 @@ class TestExtendedMath:
             self.test_passed += 1
         else:
             print(f"Check 10 (Log10) ------------ {Colours.RED}FAILED{Colours.RESET}")
-            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {solution}.")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is {self.solution}.")
+            self.test_failed += 1
+    
+    def test_pi(self):
+        calculated_solution = ExtenededMath.pi()
+        if calculated_solution == 3.1415916535897743:
+            print(f"Check 11 (Pi) ------------ {Colours.GREEN}PASSED{Colours.RESET}")
+            self.test_passed += 1
+        else:
+            print(f"Check 11 (Pi) ------------ {Colours.RED}FAILED{Colours.RESET}")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is 3.1415916535897743.")
+            self.test_failed += 1
+    
+    def test_e(self):
+        calculated_solution = ExtenededMath.e()
+        if calculated_solution == 2.718281828459045:
+            print(f"Check 12 (E) ------------ {Colours.GREEN}PASSED{Colours.RESET}")
+            self.test_passed += 1
+        else:
+            print(f"Check 12 (E) ------------ {Colours.RED}FAILED{Colours.RESET}")
+            print(f"{Colours.RED}ERROR{Colours.RESET} >>> Calculated solution is {calculated_solution}. Expected solution is 2.718281828459045.")
             self.test_failed += 1
     
     def end_test(self):
@@ -135,4 +155,6 @@ TestExtendedMath.test_discriminant(self=TestExtendedMath)
 TestExtendedMath.test_solution(self=TestExtendedMath)
 TestExtendedMath.test_log(self=TestExtendedMath)
 TestExtendedMath.test_log10(self=TestExtendedMath)
+TestExtendedMath.test_pi(self=TestExtendedMath)
+TestExtendedMath.test_e(self=TestExtendedMath)
 TestExtendedMath.end_test(self=TestExtendedMath)
