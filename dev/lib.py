@@ -95,4 +95,19 @@ class ExtenededMath:
             return round(num ** (1/10))
         else:
             raise ValueError("Value type is not a float/integer.")
+    
+    @staticmethod
+    def pi():
+        k = 1
+        s = 0
+        for i in range(1000000):
+            if i % 2 == 0:
+                s += 4 / k
+            else:
+                s -= 4 / k
+            k += 2
+        return s
 
+    @staticmethod
+    def e():
+        return 2.718281828459045
